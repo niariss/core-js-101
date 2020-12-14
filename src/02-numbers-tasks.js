@@ -20,8 +20,7 @@
  *   5, 5  => 25
  */
 function getRectangleArea(width, height) {
- let a = width * height;
-  return a;
+  return width * height;
 }
 
 
@@ -37,8 +36,7 @@ function getRectangleArea(width, height) {
  *   0    => 0
  */
 function getCicleCircumference(radius) {
-let b = (2 * Math.PI * radius);
-return b;
+  return (2 * Math.PI * radius);
 }
 
 /**
@@ -73,8 +71,7 @@ function getAverage(/* value1, value2 */) {
  *   (-5,0) (10,-10) => 18.027756377319946
  */
 function getDistanceBetweenPoints(x1, y1, x2, y2) {
-  let v = (Math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2));
-  return v;
+  return (Math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2));
 }
 
 /**
@@ -90,8 +87,7 @@ function getDistanceBetweenPoints(x1, y1, x2, y2) {
  *   5*x = 0         => 0
  */
 function getLinearEquationRoot(a, b) {
- let c (-(b / a));
- return c;
+  return (-(b / a));
 }
 
 
@@ -114,9 +110,9 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (1,2)     => 0
  */
 function getAngleBetweenVectors(x1, y1, x2, y2) {
-  const s = x1 * x2 + y1 * y2;
-  const m = Math.sqrt((x1 ** 2 + y1 ** 2)) * Math.sqrt((x2 ** 2 + y2 ** 2));
-  return Math.acos(s / m);
+  const scalar = x1 * x2 + y1 * y2;
+  const modul = Math.sqrt((x1 ** 2 + y1 ** 2)) * Math.sqrt((x2 ** 2 + y2 ** 2));
+  return Math.acos(scalar / modul);
 }
 
 /**
@@ -132,9 +128,9 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
  *     0     => 0
  */
 function getLastDigit(value) {
-  const valueStr = String(value);
-  const resultStr = Value[valueStr.length - 1];
-  return Number(resultStr);
+  const stringValue = String(value);
+  const stringResult = stringValue[stringValue.length - 1];
+  return Number(stringResult);
 }
 
 
@@ -167,8 +163,7 @@ function parseNumberFromString(value) {
  *   1,2,3   => 3.741657386773941
  */
 function getParallelipidedDiagonal(a, b, c) {
-  let d = Math.sqrt(a ** 2 + b ** 2 + c ** 2);
-  return d;
+  return Math.sqrt(a ** 2 + b ** 2 + c ** 2);
 }
 
 /**
@@ -189,8 +184,7 @@ function getParallelipidedDiagonal(a, b, c) {
  *   1678, 3  => 2000
  */
 function roundToPowerOfTen(num, pow) {
-   let c = Math.round(num / (10 ** pow)) * 10 ** pow;
-  return c;
+  return Math.round(num / (10 ** pow)) * 10 ** pow;
 }
 
 /**
@@ -240,9 +234,8 @@ function isPrime(n) {
  *   toNumber(42, 0) => 42
  *   toNumber(new Number(42), 0) => 42
  */
-function toNumber(value, def ) {
-let sum = +value + def;
-  return sum;
+function toNumber(/* value, def */) {
+  throw new Error('Not implemented');
 }
 
 module.exports = {
